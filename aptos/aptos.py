@@ -38,7 +38,7 @@ test_dir = "test"
 # read
 train_df = pd.read_csv('train.csv')
 test_df = pd.read_csv('test.csv')
-train_df = train_df[:500]
+#train_df = train_df[:500]
 
 def read_data(df, df_dir):
     features = []
@@ -84,4 +84,4 @@ model.compile(
     metrics=['accuracy']
 )
 
-#model.fit(X_train, y_trainc, batch_size=50, epochs=2)
+model.fit(X_train, y_trainc, batch_size=10, epochs=1)
