@@ -5,17 +5,17 @@ import numpy as np
 import os
 import math
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D, GlobalAveragePooling2D
-from tensorflow.keras.layers import MaxPooling2D
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.models import load_model
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Activation
-from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
-from tensorflow.keras.applications.vgg16 import VGG16
-from tensorflow.keras.applications import DenseNet121
-from tensorflow.keras.optimizers import Adam
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D, GlobalAveragePooling2D
+from keras.layers import MaxPooling2D
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import load_model
+from keras.models import Model
+from keras.layers import Input, Activation
+from keras.wrappers.scikit_learn import KerasClassifier
+from keras.applications.vgg16 import VGG16
+from keras.applications import DenseNet121
+from keras.optimizers import Adam
 
 from keras.utils import np_utils
 from keras.layers.normalization import BatchNormalization
@@ -38,7 +38,6 @@ test_dir = "test"
 # read
 train_df = pd.read_csv('train.csv')
 test_df = pd.read_csv('test.csv')
-#train_df = train_df[:500]
 
 def read_data(df, df_dir):
     features = []
@@ -84,4 +83,4 @@ model.compile(
     metrics=['accuracy']
 )
 
-model.fit(X_train, y_trainc, batch_size=10, epochs=1)
+model.fit(X_train, y_trainc, batch_size=100, epochs=36)
