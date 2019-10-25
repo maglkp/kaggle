@@ -1,3 +1,3 @@
 # kaggle
 
-Kaggle competitions that I participated in for one reason or the other
+Kaggle competitions that I participated in for one reason or another
